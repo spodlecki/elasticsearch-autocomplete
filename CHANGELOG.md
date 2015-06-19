@@ -1,8 +1,11 @@
-## 0.1.3
+## 0.1.4
 
 - Adding mergeable options to multi_fields
 - Adding highlight hash to responses
 - Updating specs to reflect highlight changing
+
+## 0.1.3
+
 
 ## 0.1.2
 
