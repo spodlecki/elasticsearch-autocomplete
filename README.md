@@ -150,7 +150,10 @@ end
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Any contributions are welcome. As of right now, a lot of these settings are just set in stone. I'd like to eventually have more in-depth customizable options.
+
 ## TODO
 
 - Create generator for new types
-- Get codeclimate online
+- Change filters to a YAML Configuration
+  - Create generator that provides default configuration
