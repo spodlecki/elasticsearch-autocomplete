@@ -1,4 +1,7 @@
 # ElasticSearch Autocomplete
+[![Code Climate](https://codeclimate.com/github/spodlecki/elasticsearch-autocomplete/badges/gpa.svg)](https://codeclimate.com/github/spodlecki/elasticsearch-autocomplete)
+[![Test Coverage](https://codeclimate.com/github/spodlecki/elasticsearch-autocomplete/badges/coverage.svg)](https://codeclimate.com/github/spodlecki/elasticsearch-autocomplete/coverage)
+[![Build Status](https://travis-ci.org/spodlecki/elasticsearch-autocomplete.svg)](https://travis-ci.org/spodlecki/elasticsearch-autocomplete)
 
 Quick and simple way to perform autocomplete with ElasticSearch Servers.
 
