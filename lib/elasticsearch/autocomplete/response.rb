@@ -36,6 +36,8 @@ module Elasticsearch
           src = search_result['_source']
           type = search_result['_type']
           score = search_result['_score']
+          highlight = search_result['highlight']
+
           returned_type = types.select{|t| t.type == type }.first
 
           if returned_type
@@ -44,7 +46,7 @@ module Elasticsearch
             )
           else
             src
-          end.merge(:_score => score, :_type => type)
+          end.merge(:_score => score, :_type => type, :_highlight => highlight)
         end
       end
 

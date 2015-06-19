@@ -1,3 +1,9 @@
+## 0.1.3
+
+- Adding mergeable options to multi_fields
+- Adding highlight hash to responses
+- Updating specs to reflect highlight changing
+
 ## 0.1.2
 
 - Bug fix: Removing `elasticsearch.rb` so it does not conflict with Elasticsearch::Model gem

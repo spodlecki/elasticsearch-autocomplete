@@ -35,6 +35,10 @@ module Elasticsearch
             expect(Filters.public_send(m, :name)[:fields]).to be_a(Hash)
           end
 
+          it "can add options to all fields" do
+            expect(Filters.public_send(m, :name, {opt: 1})[:fields].all?{|k,v| v[:opt] == 1}).to eq(true)
+          end
+
           describe "fields" do
             before(:each) do
               @fields = Filters.public_send(m, :name)[:fields]

@@ -106,7 +106,13 @@ search.results # => []
 
 mapping do
   # ...
+  # Normal
   indexes :field_name, Elasticsearch::Autocomplete::Filters.config(:field_name)
+
+  # Merge options to fields
+  indexes :field_name, Elasticsearch::Autocomplete::Filters.config(:field_name, {options_here: :now})
+
+  # .config returns as a hash, so you are able to merge there as well
   # ...
 end
 ```

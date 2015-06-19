@@ -72,7 +72,7 @@ module Elasticsearch
 
         it "returns mapped based on _type" do
           result = model.send(:parse_response, http_response)
-          expect(result).to eq([{:src=>"MAPPED", :_score=>10, :_type=>"alpha"}, {:field=>"alpha", :_score=>10, :_type=>"beta"}])
+          expect(result).to eq([{:src=>"MAPPED", :_score=>10, :_type=>"alpha", :_highlight=>nil}, {:field=>"alpha", :_score=>10, :_type=>"beta", :_highlight=>nil}])
         end
       end
     end

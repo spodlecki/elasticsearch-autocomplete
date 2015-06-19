@@ -51,15 +51,15 @@ module Elasticsearch
           }
         end
 
-        def build_config(field)
+        def build_config(field, add_options_to_fields={})
           {
             :type => :multi_field,
             :fields => {
-              field.to_sym => { type: 'string' },
-              :"#{field}.exact" => { type: 'string', index_analyzer: 'simple' },
-              :"#{field}.beginning" => { type: 'string', index_analyzer: 'beginning'},
-              :"#{field}.autocomplete" => { type: 'string', index_analyzer: 'autocomplete'},
-              :"#{field}.fuzzy" => { type: 'string', index_analyzer: 'fuzzy'}
+              field.to_sym => { type: 'string' }.merge(add_options_to_fields),
+              :"#{field}.exact" => { type: 'string', index_analyzer: 'simple' }.merge(add_options_to_fields),
+              :"#{field}.beginning" => { type: 'string', index_analyzer: 'beginning'}.merge(add_options_to_fields),
+              :"#{field}.autocomplete" => { type: 'string', index_analyzer: 'autocomplete'}.merge(add_options_to_fields),
+              :"#{field}.fuzzy" => { type: 'string', index_analyzer: 'fuzzy'}.merge(add_options_to_fields)
             }
           }
         end
