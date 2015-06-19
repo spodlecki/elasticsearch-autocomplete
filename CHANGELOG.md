@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Bug fix: Removing `elasticsearch.rb` so it does not conflict with Elasticsearch::Model gem
+
 ## 0.1.1
 
 - Added {field}.beginning to filters
