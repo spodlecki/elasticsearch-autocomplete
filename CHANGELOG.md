@@ -1,3 +1,7 @@
+## 0.1.5
+
+- Adding ability for multiple ElasticSearch types for a single query
+
 ## 0.1.4
 
 - Adding mergeable options to multi_fields

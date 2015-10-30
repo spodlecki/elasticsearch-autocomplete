@@ -40,7 +40,7 @@ module Elasticsearch
   module Autocomplete
     class ColorType < Type
       # Value of ElasticSearch's _type
-      # => String
+      # => String || Array
       def type
         'color'
       end
