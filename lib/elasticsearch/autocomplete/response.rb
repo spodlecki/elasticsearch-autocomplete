@@ -37,8 +37,7 @@ module Elasticsearch
           type = search_result['_type']
           score = search_result['_score']
           highlight = search_result['highlight']
-
-          returned_type = types.select{|t| t.type == type }.first
+          returned_type = types.select{|t| Array(t.type).include?(type) }.first
 
           if returned_type
             returned_type.mapped(

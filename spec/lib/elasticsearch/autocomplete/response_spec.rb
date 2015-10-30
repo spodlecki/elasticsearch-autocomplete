@@ -66,6 +66,22 @@ module Elasticsearch
         end
       end
 
+      describe "#to_a" do
+        it "maps results with a single type" do
+          expect(type).to receive(:type).at_least(:once) { 'beta' }
+          expect(type).to receive(:mapped).exactly(3).times { {src: 'MAPPED'} }
+          expect(model).to receive(:results) { http_response['responses'] }
+          model.to_a
+        end
+
+        it "maps results with a multiple types" do
+          expect(type).to receive(:type).at_least(:once) { ['alpha', 'beta'] }
+          expect(type).to receive(:mapped).exactly(4).times { {src: 'MAPPED'} }
+          expect(model).to receive(:results) { http_response['responses'] }
+          model.to_a
+        end
+      end
+
       describe "#each" do
         before(:each) do
           expect(type).to receive(:type).at_least(:once) { 'alpha' }
