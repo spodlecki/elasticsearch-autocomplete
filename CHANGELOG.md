@@ -1,3 +1,7 @@
+## 0.1.6
+
+- Changing up filters
+
 ## 0.1.5
 
 - Adding ability for multiple ElasticSearch types for a single query
