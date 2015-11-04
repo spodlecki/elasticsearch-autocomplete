@@ -17,7 +17,7 @@ module Elasticsearch
                 autocomplete: {
                   type: "custom",
                   tokenizer: "standard",
-                  filter: [ 'asciifolding', "standard", "lowercase", "stop", "kstem", "ngram_front" ]
+                  filter: [ 'asciifolding', "standard", "lowercase", "stop", "kstem", "ngram_beginning" ]
                 },
                 fuzzy: {
                   type: "custom",
@@ -33,17 +33,12 @@ module Elasticsearch
               filter: {
                 ngram_beginning: {
                   type: "edgeNGram",
-                  min_gram: 2,
-                  max_gram: 30
-                },
-                ngram_front: {
-                  type: "edgeNGram",
-                  min_gram: 2,
-                  max_gram: 15
+                  min_gram: 1,
+                  max_gram: 45
                 },
                 ngram_short: {
                   type: "ngram",
-                  min_gram: 2,
+                  min_gram: 1,
                   max_gram: 15
                 }
               }
