@@ -12,7 +12,7 @@ module Elasticsearch
                 simple: {
                   type: "custom",
                   tokenizer: "keyword",
-                  filter: [ "asciifolding", "keyword", "lowercase" ]
+                  filter: [ "asciifolding", "lowercase" ]
                 },
                 autocomplete: {
                   type: "custom",

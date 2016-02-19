@@ -1,3 +1,7 @@
+## 0.1.8
+
+- Stupid mistake.
+
 ## 0.1.7
 
 - Altering `exact` filter
