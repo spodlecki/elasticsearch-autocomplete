@@ -11,18 +11,18 @@ module Elasticsearch
               analyzer: {
                 simple: {
                   type: "custom",
-                  tokenizer: "standard",
-                  filter: [ "standard", "lowercase", "stop" ]
+                  tokenizer: "keyword",
+                  filter: [ "asciifolding", "keyword", "lowercase" ]
                 },
                 autocomplete: {
                   type: "custom",
                   tokenizer: "standard",
-                  filter: [ 'asciifolding', "standard", "lowercase", "stop", "kstem", "ngram_beginning" ]
+                  filter: [ 'asciifolding', "standard", "lowercase", "kstem", "ngram_beginning" ]
                 },
                 fuzzy: {
                   type: "custom",
                   tokenizer: "standard",
-                  filter: [ 'asciifolding', "standard", "lowercase", "stop", "kstem", "ngram_short" ]
+                  filter: [ 'asciifolding', "standard", "lowercase", "kstem", "ngram_short" ]
                 },
                 beginning: {
                   type: "custom",
