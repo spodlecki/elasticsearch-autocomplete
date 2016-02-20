@@ -17,17 +17,17 @@ module Elasticsearch
                 autocomplete: {
                   type: "custom",
                   tokenizer: "standard",
-                  filter: [ 'asciifolding', "standard", "lowercase", "kstem", "ngram_beginning" ]
+                  filter: [ 'asciifolding', "lowercase", "ngram_beginning" ]
                 },
                 fuzzy: {
                   type: "custom",
                   tokenizer: "standard",
-                  filter: [ 'asciifolding', "standard", "lowercase", "kstem", "ngram_short" ]
+                  filter: [ 'asciifolding', "lowercase", "ngram_short" ]
                 },
                 beginning: {
                   type: "custom",
                   tokenizer: "keyword",
-                  filter: [ "lowercase", 'asciifolding', 'ngram_beginning' ]
+                  filter: [ "asciifolding", 'lowercase', 'ngram_beginning' ]
                 }
               },
               filter: {
